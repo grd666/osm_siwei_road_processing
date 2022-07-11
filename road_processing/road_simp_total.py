@@ -16,7 +16,7 @@ sys.setdefaultencoding('utf8')
 
 # city = 'beijing'
 
-rawDir = r'G:\00_BaseData\03_RoadSimp'
+rawDir = r'E:\citydna\TOD\code\data_review\road\road_processing'
 arcpy.SpatialReference(4326)
 arcpy.env.overwriteOutput = True
 citylist = ['laibin']
@@ -24,7 +24,7 @@ citylist = ['laibin']
 for city in citylist:
     print(city)
     # <---------------------------------------------- STEP 1 -------------------------------------------------------------->
-    inputGDB = r'G:\00_BaseData\03_RoadSimp\01_RoadSiWei' #change to where you save for siwei
+    inputGDB = r'E:\citydna\TOD\code\data_review\road\raw_data\201811四维图新中国路网' #change to where you save for siwei
     outputGDB = rawDir + os.sep + city + '_shapes.gdb'
 
     rd_class = ['高速公路', '国道', '都市高速路', '省道', '县道', '乡镇道路', '九级路', '行人道路']
@@ -34,9 +34,8 @@ for city in citylist:
     env.workspace = rawDir + os.sep + city + r'_shapes.gdb'
 
     # Local variables:
-    arcpy.CopyFeatures_management(r'G:\00_BaseData\03_RoadSimp\01_CityBoundary\\' + city + '.shp', outputGDB + os.sep + 'boundary')
+    arcpy.CopyFeatures_management(r'E:\\citydna\\TOD\\code\\data_review\\boundary_city_amap\\shp_data\\' + city + '.shp', outputGDB + os.sep + 'boundary')
     parcel = "boundary"
-
 
     start = time.clock()
     for index, feature in enumerate(rd_class):

@@ -11,13 +11,15 @@ import time
 env.overwriteOutput = True
 
 # citylist = [u'beijing', u'changchun', u'changsha',u'chengdu', u'chongqing', u'dalian', u'dongguan', u'foshan', u'fuzhou', u'guangzhou', u'guiyang', u'hangzhou', u'harbin', u'hefei', u'kunming', u'nanchang', u'nanjing', u'nanning', u'ningbo', u'qingdao', u'shanghai', u'shenyang', u'shenzhen', u'shijiazhuang', u'suzhou', u'tianjin', u'wuhan', u'wuxi', u'xiamen', u'xian', u'zhengzhou']
-citylist = ['tianjin', 'shanghai', 'chongqing', 'shijiazhuang', 'tangshan', 'taiyuan', 'huhehaote', 'haerbin',
-            'changchun', 'shenyang', 'dalian', 'jinan', 'qingdao', 'nanjing', 'xuzhou', 'hefei', 'hangzhou', 'ningbo',
-            'quzhou', 'fuzhou', 'xiamen', 'nanchang', 'ganzhou', 'zhengzhou', 'luoyang', 'wuhan', 'huangshi',
-            'changsha', 'guangzhou', 'shenzhen', 'nanning', 'kunming', 'guiyang', 'chengdu', 'xian', 'lanzhou',
-            'yinchuan', 'wulumuqi']
+# citylist = ['tianjin', 'shanghai', 'chongqing', 'shijiazhuang', 'tangshan', 'taiyuan', 'huhehaote', 'haerbin',
+#             'changchun', 'shenyang', 'dalian', 'jinan', 'qingdao', 'nanjing', 'xuzhou', 'hefei', 'hangzhou', 'ningbo',
+#             'quzhou', 'fuzhou', 'xiamen', 'nanchang', 'ganzhou', 'zhengzhou', 'luoyang', 'wuhan', 'huangshi',
+#             'changsha', 'guangzhou', 'shenzhen', 'nanning', 'kunming', 'guiyang', 'chengdu', 'xian', 'lanzhou',
+#             'yinchuan', 'wulumuqi']
+#
+# citylist = ['eerduosi', 'chifeng', 'tongliao']
 
-citylist = ['eerduosi', 'chifeng', 'tongliao']
+citylist = ['wuxi','changzhou','suzhou','wenzhou','jiaxing','shaoxing','wuhu','foshan','dongguan']
 
 for city in citylist:
     print(city)

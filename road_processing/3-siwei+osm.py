@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import arcpy
 import pandas as pd
 import os
@@ -131,13 +132,7 @@ def CancelOverlapRoads(basemap, cancelmap):
 '''
 函数定义部分结束，以下为循环运行部分
 '''
-citylist = ['beijing', 'tianjin', 'shanghai', 'chongqing', 'shijiazhuang', 'tangshan', 'taiyuan', 'jincheng',
-            'huhehaote', 'baotou', 'haerbin', 'daqing', 'changchun', 'siping', 'shenyang', 'dalian', 'jinan', 'qingdao',
-            'dongying', 'nanjing', 'xuzhou', 'hefei', 'bozhou', 'hangzhou', 'ningbo', 'quzhou', 'fuzhou', 'xiamen',
-            'nanchang', 'jingdezhen', 'ganzhou', 'zhengzhou', 'luoyang', 'wuhan', 'huangshi', 'changsha', 'changde',
-            'guangzhou', 'shenzhen', 'haikou', 'sanya', 'nanning', 'liuzhou', 'kunming', 'lincang', 'guiyang', 'anshun',
-            'chengdu', 'suining', 'xian', 'yanan', 'lanzhou', 'baiyin', 'yinchuan', 'wuzhong', 'wulumuqi', 'kelamayi',
-            'xining', 'lasa']
+citylist = ['wuxi','changzhou','suzhou','wenzhou','jiaxing','shaoxing','wuhu','foshan','dongguan']
 keeplist = []
 
 # city = 'fuzhou'
