@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+/data/
+/processed_data/
+/raw_data/
+/road_processing/osm_road_del.gdb/
+/road_processing/osm_road_simp.gdb/
+/.idea/
