@@ -126,7 +126,7 @@ def CancelOverlapRoads(basemap, cancelmap):
 
 # ==========================================================================
 citylist = ['wuxi','changzhou','suzhou','wenzhou','jiaxing','shaoxing','wuhu','foshan','dongguan']
-keeplist = ['changzhou_osmdel','dongguan_osmdel','foshan_osmdel','jiaxing_osmdel','shaoxing_osmdel','suzhou_osmdel','wenzhou_osmdel','wuhu_osmdel']
+keeplist = []
 
 
 for city in citylist[0:]:

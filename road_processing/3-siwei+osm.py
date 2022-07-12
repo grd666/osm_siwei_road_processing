@@ -3,7 +3,7 @@ import arcpy
 import pandas as pd
 import os
 
-arcpy.env.workspace = r'E:\01_CityDiagnosis2021\01_Data\04_road\00road_osm_siwei.gdb'
+arcpy.env.workspace = r'E:\citydna\TOD\code\data_review\road\road_processing\road_osm_siwei.gdb'
 arcpy.env.overwriteOutput = True
 
 # simplified road data (simp_path should be same as 'arcpy.env.workspace' in osm_siwei_simplify_highway_road.py)
@@ -139,9 +139,9 @@ keeplist = []
 # city = 'tianjin'
 # citylist = ['tianjin', 'fuzhou']
 
-for city in citylist[:1]:
-    basemapRoot = r'E:\01_CityDiagnosis2021\01_Data\04_road\02road_siwei_single.gdb'
-    cancelmapRoot = r'E:\01_CityDiagnosis2021\01_Data\04_road\01road_osm_single.gdb'
+for city in citylist:
+    basemapRoot = r'E:\citydna\TOD\code\data_review\road\road_processing\siwei_all_simp.gdb'
+    cancelmapRoot = r'E:\citydna\TOD\code\data_review\road\road_processing\osm_road_simp.gdb'
     basemap = city
     cancelmap = city + "_osm"
     CancelOverlapRoads(basemap, cancelmap)
