@@ -281,7 +281,7 @@ keeplist = []
 # city = 'huhehaote'
 
 
-for city in citylist[1:]:
+for city in citylist[0:]: # 原来写的citylist[1:]...导致漏了第一个
     print(city)
     # ---从全国osm路网中裁剪出各个城市范围的osm路网
     clip_city_original_osm(city)

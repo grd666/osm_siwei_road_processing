@@ -126,10 +126,10 @@ def CancelOverlapRoads(basemap, cancelmap):
 
 # ==========================================================================
 citylist = ['wuxi','changzhou','suzhou','wenzhou','jiaxing','shaoxing','wuhu','foshan','dongguan']
-keeplist = []
+keeplist = ['changzhou_osmdel','dongguan_osmdel','foshan_osmdel','jiaxing_osmdel','shaoxing_osmdel','suzhou_osmdel','wenzhou_osmdel','wuhu_osmdel']
 
 
-for city in citylist[1:]:
+for city in citylist[0:]:
     arcpy.MakeFeatureLayer_management(r'E:\\citydna\\TOD\\code\\data_review\\road\\road_processing\\osm_road_simp.gdb\\' + city + "_osm", 'temp')
     expression = "fclass in ('motorway', 'trunk') "
     arcpy.SelectLayerByAttribute_management('temp', 'NEW_SELECTION', expression)
