@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # Date: 2019/04/15
 # Author: ZQY
 # Content: Extract ungaosu road and simplify the road
@@ -16,10 +18,10 @@ sys.setdefaultencoding('utf8')
 
 # city = 'beijing'
 
-rawDir = r'E:\citydna\TOD\code\data_review\road\road_processing'
+rawDir = r'E:\citydna\TOD\code\data_review\road\road_processing\siwei_road_simp'
 arcpy.SpatialReference(4326)
 arcpy.env.overwriteOutput = True
-citylist = ['laibin']
+citylist = ['wuxi','changzhou','suzhou','wenzhou','jiaxing','shaoxing','wuhu','foshan','dongguan']
 
 for city in citylist:
     print(city)
@@ -525,7 +527,7 @@ for city in citylist:
     # <---------------------------------------------- STEP 5 -------------------------------------------------------------->
     # Copy result to a new directory which named by city
     # Create target Directory if don't exist
-    dirName = r'G:\00_BaseData\03_RoadSimp\01_Result_Road_Simp\\' + city
+    dirName = r'E:\citydna\TOD\code\data_review\road\road_processing\siwei_road_simp\01_Result_Road_Simp\\' + city
     if not os.path.exists(dirName):
         os.mkdir(dirName)
         print("Directory " , dirName ,  " Created ")

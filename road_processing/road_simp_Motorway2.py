@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Date: 2019/04/15
 # Author: ZQY
 # Content: Simplify motorway
@@ -23,10 +24,10 @@ citylist = ['wuxi','changzhou','suzhou','wenzhou','jiaxing','shaoxing','wuhu','f
 
 for city in citylist:
     print(city)
-    env.workspace = r'G:\00_BaseData\03_RoadSimp\\' + city + '_shapes.gdb'
-    fc_inpath = r'G:\00_BaseData\03_RoadSimp\\' + city + '_shapes.gdb'
-    arcpy.CreateFileGDB_management(r'G:\00_BaseData\03_RoadSimp\01_Result_Motorway_Simp', city + '_motorway.gdb', '10.0')
-    outgdb = r'G:\00_BaseData\03_RoadSimp\01_Result_Motorway_Simp\\' + city + '_motorway.gdb'
+    env.workspace = r'E:\citydna\TOD\code\data_review\road\road_processing\siwei_road_simp\\' + city + '_shapes.gdb'
+    fc_inpath = r'E:\citydna\TOD\code\data_review\road\road_processing\siwei_road_simp\\' + city + '_shapes.gdb'
+    arcpy.CreateFileGDB_management(r'E:\citydna\TOD\code\data_review\road\road_processing\siwei_road_simp\01_Result_Motorway_Simp', city + '_motorway.gdb', '10.0')
+    outgdb = r'E:\citydna\TOD\code\data_review\road\road_processing\siwei_road_simp\01_Result_Motorway_Simp\\' + city + '_motorway.gdb'
     fclist = [u'rd00', u'rd02']
     for fc in fclist:
         if "inter" not in fc:
@@ -42,10 +43,10 @@ for city in citylist:
             arcpy.Delete_management("temp_remove")
             arcpy.Delete_management("temp_remove_singlepart")
 
-    env.workspace = r'G:\00_BaseData\03_RoadSimp\01_Result_Motorway_Simp\\' + city + '_motorway.gdb'
+    env.workspace = r'E:\citydna\TOD\code\data_review\road\road_processing\siwei_road_simp\01_Result_Motorway_Simp\\' + city + '_motorway.gdb'
     fclist = arcpy.ListFeatureClasses()
-    arcpy.CreateFileGDB_management(r'G:\00_BaseData\03_RoadSimp\01_Result_Motorway_Simp', city + '_Motorway_final.gdb', '10.0')
-    outgdb = r'G:\00_BaseData\03_RoadSimp\01_Result_Motorway_Simp\\' + city + '_Motorway_final.gdb'
+    arcpy.CreateFileGDB_management(r'E:\citydna\TOD\code\data_review\road\road_processing\siwei_road_simp\01_Result_Motorway_Simp', city + '_Motorway_final.gdb', '10.0')
+    outgdb = r'E:\citydna\TOD\code\data_review\road\road_processing\siwei_road_simp\01_Result_Motorway_Simp\\' + city + '_Motorway_final.gdb'
     for fc in fclist:
         if 'motor' in fc:
             print fc
